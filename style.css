@@ -1,0 +1,57 @@
+body{
+	text-align: center;
+}
+
+h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.square{
+	width: 100px;
+	height: 100px;
+	background-color: beige;
+	border: 1px solid gray;
+	display: inline-block;	/*Para ficar um quadrado ao lado do outro*/
+	border-radius: 5%;
+}
+
+.o{
+/*Para o filho dele conseguir ficar centralizado*/
+	position: relative;
+}
+/*after vai ser depois que o elemento for clicado*/
+.o:after{
+	/**/
+	position: absolute;
+	/*o vai ser o escudo*/
+	content: "\⭕";
+	font-size: 50px;
+	line-height: 100px;
+	
+	/*Aqui eu forço que o elemento fique no centro em relação ao pai dele
+	mas para isso o pai dele deve ser absolute, vamos colocar ela no o*/
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/**Uso a mesma referência aqui que eu usei no elemento o*/
+.x{
+	position: relative;
+}
+
+.x:after{
+	position: absolute;
+	content: "\❌";
+	font-size: 50px;
+	line-height: 100px;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+#restart{
+	margin-top: 20px;
+}
